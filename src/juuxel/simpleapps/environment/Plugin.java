@@ -18,4 +18,16 @@ public class Plugin
     {
         return name;
     }
+
+    @Override
+    public boolean equals(Object object)
+    {
+        return object instanceof Plugin && ((Plugin) object).getName().equals(name);
+    }
+
+    @Override
+    public int hashCode()
+    {
+        return name.hashCode();
+    }
 }
