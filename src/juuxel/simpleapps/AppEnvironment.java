@@ -56,4 +56,18 @@ public final class AppEnvironment
     {
         return debugOutputEnabled;
     }
+
+    /**
+     * Returns true if a plugin with name matching {@code name} is found in {@link AppEnvironment#PLUGINS}
+     * @param name The name of the plugin
+     * @return True if a plugin with name matching {@code name} is found in {@link AppEnvironment#PLUGINS}
+     */
+    public static boolean isPluginRegistered(String name)
+    {
+        for (Plugin plugin : PLUGINS)
+            if (plugin.getName().equals(name))
+                return true;
+
+        return false;
+    }
 }
