@@ -81,4 +81,13 @@ public abstract class Application extends JPanel
     {
         return menuBar;
     }
+
+    /**
+     * Returns true if this Application has a main menu. (A main menu is a menu with label text being the application name.)
+     * @return true if this Application has a main menu.
+     */
+    public boolean hasMainMenu()
+    {
+        return false;
+    }
 }
