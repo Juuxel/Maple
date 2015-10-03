@@ -1,13 +1,22 @@
 package juuxel.simpleapps;
 
+import juuxel.simpleapps.environment.Plugin;
+
 import javax.swing.*;
 import java.awt.Container;
+import java.util.HashSet;
+import java.util.Set;
 
 /**
  * The application environment class.
  */
 public final class AppEnvironment
 {
+    /**
+     * A Set of Plugin instances. Used by Notes++ for detecting Fawde compatibility.
+     */
+    public static final Set<Plugin> PLUGINS = new HashSet<>();
+
     /**
      * Is debug output enabled in the environment.
      * @see juuxel.simpleapps.util.Debug
