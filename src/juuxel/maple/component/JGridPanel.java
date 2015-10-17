@@ -4,43 +4,67 @@ import javax.swing.*;
 import java.awt.*;
 import java.util.HashMap;
 
+/**
+ * A panel with a custom wrapper around GridBagLayout.
+ */
 public class JGridPanel extends JPanel
 {
     private GridProperties properties;
     private final GridBagConstraints constraints = new GridBagConstraints();
-
     private int nextComponent = 0;
 
+    /**
+     * Class constructor.
+     */
     public JGridPanel()
     {
         properties = new GridProperties();
     }
 
+    /**
+     * Constructs a new JGridPanel object.
+     * @param properties the grid properties for this object
+     */
     public JGridPanel(GridProperties properties)
     {
-        this.properties = properties;
+        setProperties(properties);
     }
 
     {
-        GridBagLayout layout = new GridBagLayout();
-        setLayout(layout);
+        setLayout(new GridBagLayout());
     }
 
+    /**
+     * Get the GridProperties object for this panel.
+     * @return the grid properties
+     */
     public GridProperties getProperties()
     {
         return properties;
     }
 
+    /**
+     * Set the GridProperties object for this panel.
+     * @param properties the grid properties
+     */
     public void setProperties(GridProperties properties)
     {
         this.properties = properties;
     }
 
+    /**
+     * Set the index of the next component.
+     * @param nextComponent the index
+     */
     public void setNextComponent(int nextComponent)
     {
         this.nextComponent = nextComponent;
     }
 
+    /**
+     * Get the index of the next component.
+     * @return the index
+     */
     public int getNextComponent()
     {
         return nextComponent;
@@ -67,16 +91,28 @@ public class JGridPanel extends JPanel
         return properties.addComponent(this, component, index);
     }
 
+    /**
+     * Properties for JGridPanel.
+     */
     public static class GridProperties
     {
         private final HashMap<Integer, GridCellProperties> gridProperties = new HashMap<>();
-        private int rowWidth;
 
+        /**
+         * Put a property in this object.
+         * @param i the key for the value
+         * @param cellProperties the {@link GridCellProperties} value
+         */
         public void put(int i, GridCellProperties cellProperties)
         {
             gridProperties.put(i, cellProperties);
         }
 
+        /**
+         * Gets a property from this object.
+         * @param i the key for the value
+         * @return the {@link GridCellProperties} value
+         */
         public GridCellProperties get(int i)
         {
             GridCellProperties props = gridProperties.get(new Integer(i));
@@ -84,16 +120,13 @@ public class JGridPanel extends JPanel
             return props != null ? props : gridProperties.put(i, new GridCellProperties());
         }
 
-        public void setRowWidth(int rowWidth)
-        {
-            this.rowWidth = rowWidth;
-        }
-
-        public int getRowWidth()
-        {
-            return rowWidth;
-        }
-
+        /**
+         * Add a component to the Container specified by the parent argument.
+         * @param parent the Container to add component to
+         * @param component the component to be added
+         * @param index the index for the component
+         * @return the component argument
+         */
         public Component addComponent(JGridPanel parent, Component component, int index)
         {
             GridBagConstraints constraints = parent.constraints;
@@ -110,22 +143,55 @@ public class JGridPanel extends JPanel
         }
     }
 
+    /**
+     * Properties for a cell in a JGridPanel instance.
+     */
     public static class GridCellProperties
     {
+        /**
+         * The width of this cell.
+         */
         public int gridWidth = 1;
+
+        /**
+         * The height of this cell.
+         */
         public int gridHeight = 1;
+
+        /**
+         * The location of this cell in the X axis.
+         */
         public int gridX = 0;
+
+        /**
+         * The location of this cell in the Y axis.
+         */
         public int gridY = 0;
 
+        /**
+         * Class constructor.
+         */
         public GridCellProperties()
         {}
 
+        /**
+         * Constructs a new GridCellProperties instance.
+         * @param gridX location of this cell in X axis
+         * @param gridY location of this cell in Y axis
+         */
         public GridCellProperties(int gridX, int gridY)
         {
             this.gridX = gridX;
             this.gridY = gridY;
         }
 
+        /**
+         * Constructs a new GridCellProperties instance.
+         * @param gridX location of this cell in X axis
+         * @param gridY location of this cell in Y axis
+         * @param gridHeight height of this grid cell
+         * @param gridWidth width of this grid cell
+         */
         public GridCellProperties(int gridX, int gridY, int gridHeight, int gridWidth)
         {
             this(gridX, gridY);
