@@ -2,6 +2,8 @@ package juuxel.maple.environment;
 
 public class Plugin
 {
+    public static final Plugin MENU_BAR_PLUGIN = new Plugin("M_MenuBar");
+
     private String name;
 
     public Plugin(String name)
