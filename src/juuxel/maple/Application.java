@@ -1,6 +1,6 @@
 package juuxel.maple;
 
-import juuxel.maple.environment.PluginManager;
+import juuxel.maple.plugin.PluginManager;
 import juuxel.maple.reference.Plugins;
 
 import javax.swing.*;

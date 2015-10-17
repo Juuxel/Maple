@@ -6,11 +6,6 @@ package juuxel.maple.meta;
 public enum MetaTypes
 {
     /**
-     * Category metadata type. Should be an instance of {@link Category}.
-     */
-    CATEGORY,
-
-    /**
      * Icon metadata type. Should be an instance of {@link javax.swing.Icon}.
      */
     ICON,

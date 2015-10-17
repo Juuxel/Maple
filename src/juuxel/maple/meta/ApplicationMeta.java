@@ -12,11 +12,6 @@ import java.util.List;
 public abstract class ApplicationMeta
 {
     /**
-     * The categories of this application.
-     */
-    private final List<Categories> categories;
-
-    /**
      * The name of this application
      */
     private final String name;
@@ -26,17 +21,7 @@ public abstract class ApplicationMeta
      */
     public ApplicationMeta(String name)
     {
-        categories = new ArrayList<>();
         this.name = name;
-    }
-
-    /**
-     * Get the categories of this ApplicationMeta.
-     * @return The categories of this ApplicationMeta.
-     */
-    public List<Categories> getCategories()
-    {
-        return categories;
     }
 
     /**

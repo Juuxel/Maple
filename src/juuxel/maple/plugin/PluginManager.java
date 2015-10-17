@@ -1,4 +1,4 @@
-package juuxel.maple.environment;
+package juuxel.maple.plugin;
 
 import java.util.HashSet;
 import java.util.Set;

@@ -1,4 +1,4 @@
-package juuxel.maple.environment;
+package juuxel.maple.plugin;
 
 /**
  * The application environment plugin class.
@@ -6,10 +6,7 @@ package juuxel.maple.environment;
  */
 public class Plugin
 {
-    /**
-     * The name of this plugin.
-     */
-    private String name;
+    private final String name;
 
     /**
      * Constructs a new Plugin object.
@@ -21,25 +18,26 @@ public class Plugin
     }
 
     /**
-     *
-     * @param name
+     * Get the name of this plugin.
+     * @return the plugin name
      */
-    public void setName(String name)
-    {
-        this.name = name;
-    }
-
     public String getName()
     {
         return name;
     }
 
+    /**
+     * @inheritDoc
+     */
     @Override
     public boolean equals(Object object)
     {
         return object instanceof Plugin && ((Plugin) object).getName().equals(name);
     }
 
+    /**
+     * @inheritDoc
+     */
     @Override
     public int hashCode()
     {

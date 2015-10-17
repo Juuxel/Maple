@@ -1,6 +1,5 @@
 package juuxel.maple;
 
-import javax.swing.*;
 import java.awt.*;
 
 /**
@@ -20,13 +19,6 @@ public final class AppEnvironment
      * @see juuxel.maple.Application
      */
     public static Class<? extends Container> defaultFrameClass = AFrame.class;
-
-    /**
-     * The default file manager class for applications.
-     * @see juuxel.maple.environment.FileManager
-     * @see juuxel.maple.environment.FileChanger
-     */
-    public static Class<?> defaultFileManagerClass = JFileChooser.class;
 
     private AppEnvironment() {}
 
