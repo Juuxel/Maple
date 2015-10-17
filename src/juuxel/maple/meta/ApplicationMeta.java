@@ -1,6 +1,6 @@
-package juuxel.simpleapps.meta;
+package juuxel.maple.meta;
 
-import juuxel.simpleapps.Application;
+import juuxel.maple.Application;
 
 import java.util.ArrayList;
 import java.util.List;

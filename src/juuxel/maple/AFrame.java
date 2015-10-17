@@ -1,6 +1,6 @@
-package juuxel.simpleapps;
+package juuxel.maple;
 
-import juuxel.simpleapps.util.AppUtils;
+import juuxel.maple.util.AppUtils;
 
 import javax.swing.*;
 

@@ -1,4 +1,4 @@
-package juuxel.simpleapps.environment;
+package juuxel.maple.environment;
 
 public class Plugin
 {

@@ -1,6 +1,6 @@
-package juuxel.simpleapps.util;
+package juuxel.maple.util;
 
-import juuxel.simpleapps.AppEnvironment;
+import juuxel.maple.AppEnvironment;
 
 import java.io.PrintStream;
 

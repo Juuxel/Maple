@@ -1,6 +1,6 @@
-package juuxel.simpleapps.environment;
+package juuxel.maple.environment;
 
-import juuxel.simpleapps.AppEnvironment;
+import juuxel.maple.AppEnvironment;
 
 import javax.swing.*;
 import java.lang.reflect.Method;

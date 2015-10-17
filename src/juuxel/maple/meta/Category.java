@@ -1,6 +1,6 @@
-package juuxel.simpleapps.meta;
+package juuxel.maple.meta;
 
-import juuxel.simpleapps.localization.Localizable;
+import juuxel.maple.localization.Localizable;
 
 import java.util.Set;
 

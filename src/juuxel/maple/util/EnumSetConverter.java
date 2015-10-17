@@ -1,4 +1,4 @@
-package juuxel.simpleapps.util;
+package juuxel.maple.util;
 
 import java.util.EnumSet;
 import java.util.HashSet;

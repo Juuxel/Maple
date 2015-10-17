@@ -1,17 +1,18 @@
-package juuxel.simpleapps.meta;
+package juuxel.maple.environment;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
-/**
- * The metadata annotation for applications.
- * @see MetaTypes
- */
 @Retention(RetentionPolicy.RUNTIME)
-@Target(ElementType.FIELD)
-public @interface Metadata
+@Target(ElementType.METHOD)
+public @interface FileChanger
 {
-    MetaTypes value();
+    FileManagementTypes value();
+
+    enum FileManagementTypes
+    {
+        GENERAL, OPEN, SAVE
+    }
 }

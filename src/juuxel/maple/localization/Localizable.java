@@ -1,8 +1,8 @@
-package juuxel.simpleapps.localization;
+package juuxel.maple.localization;
 
 
 /**
- * The helper interface for localizable objects like {@link juuxel.simpleapps.meta.Category}.
+ * The helper interface for localizable objects like {@link juuxel.maple.meta.Category}.
  */
 public interface Localizable
 {

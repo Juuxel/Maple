@@ -1,6 +1,6 @@
-package juuxel.simpleapps;
+package juuxel.maple;
 
-import juuxel.simpleapps.environment.Plugin;
+import juuxel.maple.environment.Plugin;
 
 import javax.swing.*;
 import java.awt.Container;
@@ -19,21 +19,21 @@ public final class AppEnvironment
 
     /**
      * Is debug output enabled in the environment.
-     * @see juuxel.simpleapps.util.Debug
+     * @see juuxel.maple.util.Debug
      */
     public static boolean debugOutputEnabled = false;
 
     /**
      * The default frame class for applications.
-     * @see juuxel.simpleapps.AFrame
-     * @see juuxel.simpleapps.Application
+     * @see juuxel.maple.AFrame
+     * @see juuxel.maple.Application
      */
     public static Class<? extends Container> defaultFrameClass = AFrame.class;
 
     /**
      * The default file manager class for applications.
-     * @see juuxel.simpleapps.environment.FileManager
-     * @see juuxel.simpleapps.environment.FileChanger
+     * @see juuxel.maple.environment.FileManager
+     * @see juuxel.maple.environment.FileChanger
      */
     public static Class<?> defaultFileManagerClass = JFileChooser.class;
 

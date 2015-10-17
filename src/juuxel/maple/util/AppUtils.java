@@ -1,9 +1,9 @@
-package juuxel.simpleapps.util;
+package juuxel.maple.util;
 
-import juuxel.simpleapps.Application;
-import juuxel.simpleapps.meta.ApplicationMeta;
-import juuxel.simpleapps.meta.MetaTypes;
-import juuxel.simpleapps.meta.Metadata;
+import juuxel.maple.Application;
+import juuxel.maple.meta.ApplicationMeta;
+import juuxel.maple.meta.MetaTypes;
+import juuxel.maple.meta.Metadata;
 
 import javax.swing.*;
 import java.lang.reflect.Field;

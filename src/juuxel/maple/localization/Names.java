@@ -1,4 +1,4 @@
-package juuxel.simpleapps.localization;
+package juuxel.maple.localization;
 
 /**
  * Unlocalized names for the environments that use localization.

@@ -1,4 +1,4 @@
-package juuxel.simpleapps;
+package juuxel.maple;
 
 import javax.swing.*;
 import java.awt.Container;
