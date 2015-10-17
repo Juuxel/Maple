@@ -1,10 +1,13 @@
 package juuxel.maple;
 
+import juuxel.maple.environment.PluginManager;
+import juuxel.maple.reference.Plugins;
+
 import javax.swing.*;
 import java.awt.Container;
 
 /**
- * The SimpleApps application class.
+ * The Maple application class.
  */
 public abstract class Application extends JPanel
 {
@@ -88,6 +91,6 @@ public abstract class Application extends JPanel
      */
     public boolean hasMainMenu()
     {
-        return false;
+        return PluginManager.isPluginRegistered(Plugins.MENU_BAR_PLUGIN);
     }
 }
