@@ -12,6 +12,7 @@ public class JGridPanel extends JPanel
     private GridProperties properties;
     private final GridBagConstraints constraints = new GridBagConstraints();
     private int nextComponent = 0;
+    private final HashMap<Component, Integer> indexMap = new HashMap<>();
 
     /**
      * Class constructor.
@@ -77,7 +78,7 @@ public class JGridPanel extends JPanel
      */
     public Component addToGrid(Component component)
     {
-        return addToGrid(component, nextComponent++);
+        return addToGrid(component, indexMap.containsKey(component) ? indexMap.get(component) : nextComponent++);
     }
 
     /**
@@ -90,7 +91,17 @@ public class JGridPanel extends JPanel
     {
         return properties.addComponent(this, component, index);
     }
-
+    
+    /**
+     * Maps the component specified by the comp argument to the index specified by the index argument.
+     * @param comp the component to be mapped
+     * @param index the index for the component
+     */
+    public void mapComponent(Component comp, int index)
+    {
+        indexMap.put(comp, index);
+    }
+     
     /**
      * Properties for JGridPanel.
      */
@@ -115,9 +126,11 @@ public class JGridPanel extends JPanel
          */
         public GridCellProperties get(int i)
         {
-            GridCellProperties props = gridProperties.get(new Integer(i));
+            boolean hasExistingEntry = gridProperties.containsKey(new Integer(i));
+            
+            if (!hasExistingEntry) gridProperties.put(i, new GridCellProperties());
 
-            return props != null ? props : gridProperties.put(i, new GridCellProperties());
+            return gridProperties.get(new Integer(i));
         }
 
         /**
