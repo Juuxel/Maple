@@ -1,11 +1,11 @@
-package juuxel.maple.util;
+package juuxel.maple;
 
-import juuxel.maple.Application;
 import juuxel.maple.meta.ApplicationMeta;
 import juuxel.maple.meta.MetaTypes;
 import juuxel.maple.meta.Metadata;
 
 import javax.swing.*;
+import java.awt.*;
 import java.lang.reflect.Field;
 
 /**
@@ -14,6 +14,22 @@ import java.lang.reflect.Field;
 public final class AppUtils
 {
     private AppUtils() {}
+
+    /**
+     * The default frame class for applications.
+     * @see juuxel.maple.AFrame
+     * @see juuxel.maple.Application
+     */
+    public static Class<? extends Container> defaultFrameClass = AFrame.class;
+
+    /**
+     * Get the default frame class for applications.
+     * @return The default frame class.
+     */
+    public static Class<? extends Container> getDefaultFrameClass()
+    {
+        return defaultFrameClass;
+    }
 
     /**
      * Returns the name of the app parameter.

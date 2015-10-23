@@ -35,7 +35,7 @@ public final class PluginManager
     }
 
     /**
-     * Register plugins in PluginRegistry.
+     * Register plugins in PluginManager.
      * @param plugin a plugin to register
      */
     public static void registerPlugin(Plugin plugin)

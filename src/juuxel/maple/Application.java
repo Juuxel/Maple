@@ -34,7 +34,7 @@ public abstract class Application extends JPanel
      */
     public Application(boolean generateFrame)
     {
-        this(AppEnvironment.getDefaultFrameClass(), generateFrame);
+        this(AppUtils.getDefaultFrameClass(), generateFrame);
     }
 
     /**

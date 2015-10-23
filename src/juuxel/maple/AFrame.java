@@ -1,7 +1,5 @@
 package juuxel.maple;
 
-import juuxel.maple.util.AppUtils;
-
 import javax.swing.*;
 
 /**
