@@ -1,5 +1,6 @@
 package juuxel.maple;
 
+import juuxel.maple.component.JApplicationFrame;
 import juuxel.maple.plugin.PluginManager;
 import juuxel.maple.reference.Plugins;
 
@@ -51,8 +52,8 @@ public abstract class Application extends JPanel
         buildUserInterface();
 
         if (generateFrame)
-            if (frameClass == AFrame.class)
-                new AFrame(this);
+            if (frameClass == JApplicationFrame.class)
+                new JApplicationFrame(this);
             else
                 try
                 {

@@ -1,18 +1,21 @@
-package juuxel.maple;
+package juuxel.maple.component;
+
+import juuxel.maple.AppUtils;
+import juuxel.maple.Application;
 
 import javax.swing.*;
 
 /**
  * Frame for applications.
  */
-public class AFrame extends JFrame
+public class JApplicationFrame extends JFrame
 {
     /**
      * The class constructor.
      * @param app the app for this frame
      * @param title the title for this frame
      */
-    public AFrame(Application app, String title)
+    public JApplicationFrame(Application app, String title)
     {
         super(title);
         this.getContentPane().add(app);
@@ -27,9 +30,9 @@ public class AFrame extends JFrame
     /**
      * The class constructor. Creates the title based on {@link AppUtils#getApplicationName(Application)} output.
      * @param app the app for this name
-     * @see AFrame#AFrame(Application, String)
+     * @see JApplicationFrame#JApplicationFrame(Application, String)
      */
-    public AFrame(Application app)
+    public JApplicationFrame(Application app)
     {
         this(app, AppUtils.getApplicationName(app));
     }

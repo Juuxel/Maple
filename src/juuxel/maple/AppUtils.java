@@ -1,5 +1,6 @@
 package juuxel.maple;
 
+import juuxel.maple.component.JApplicationFrame;
 import juuxel.maple.meta.ApplicationMeta;
 import juuxel.maple.meta.MetaTypes;
 import juuxel.maple.meta.Metadata;
@@ -17,10 +18,10 @@ public final class AppUtils
 
     /**
      * The default frame class for applications.
-     * @see juuxel.maple.AFrame
-     * @see juuxel.maple.Application
+     * @see JApplicationFrame
+     * @see Application
      */
-    public static Class<? extends Container> defaultFrameClass = AFrame.class;
+    public static Class<? extends Container> defaultFrameClass = JApplicationFrame.class;
 
     /**
      * Get the default frame class for applications.
