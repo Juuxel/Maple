@@ -1,4 +1,4 @@
-package juuxel.maple.meta;
+package juuxel.maple.application.meta;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

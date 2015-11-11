@@ -1,4 +1,4 @@
-package juuxel.maple.plugin;
+package juuxel.maple.application.plugin;
 
 /**
  * The application environment plugin class.

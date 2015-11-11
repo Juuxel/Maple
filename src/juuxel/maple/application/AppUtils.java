@@ -1,9 +1,9 @@
-package juuxel.maple;
+package juuxel.maple.application;
 
-import juuxel.maple.component.JApplicationFrame;
-import juuxel.maple.meta.ApplicationMeta;
-import juuxel.maple.meta.MetaTypes;
-import juuxel.maple.meta.Metadata;
+import juuxel.maple.application.component.JApplicationFrame;
+import juuxel.maple.application.meta.ApplicationMeta;
+import juuxel.maple.application.meta.MetaTypes;
+import juuxel.maple.application.meta.Metadata;
 
 import javax.swing.*;
 import java.awt.*;

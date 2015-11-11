@@ -1,7 +1,7 @@
-package juuxel.maple.component;
+package juuxel.maple.application.component;
 
-import juuxel.maple.AppUtils;
-import juuxel.maple.Application;
+import juuxel.maple.application.AppUtils;
+import juuxel.maple.application.Application;
 
 import javax.swing.*;
 

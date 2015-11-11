@@ -1,9 +1,6 @@
-package juuxel.maple.meta;
+package juuxel.maple.application.meta;
 
-import juuxel.maple.Application;
-
-import java.util.ArrayList;
-import java.util.List;
+import juuxel.maple.application.Application;
 
 /**
  * The application metadata used in application environments.

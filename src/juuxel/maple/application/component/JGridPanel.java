@@ -1,4 +1,4 @@
-package juuxel.maple.component;
+package juuxel.maple.application.component;
 
 import javax.swing.*;
 import java.awt.*;

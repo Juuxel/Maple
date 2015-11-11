@@ -1,4 +1,4 @@
-package juuxel.maple.meta;
+package juuxel.maple.application.meta;
 
 /**
  * The metadata types for {@link Metadata}
