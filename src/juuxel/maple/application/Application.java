@@ -1,8 +1,8 @@
 package juuxel.maple.application;
 
 import juuxel.maple.application.component.JApplicationFrame;
-import juuxel.maple.application.plugin.PluginManager;
-import juuxel.maple.application.reference.Plugins;
+import juuxel.maple.plugin.PluginManager;
+import juuxel.maple.reference.Plugins;
 
 import javax.swing.*;
 import java.awt.Container;

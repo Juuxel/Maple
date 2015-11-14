@@ -1,6 +1,6 @@
-package juuxel.maple.application.reference;
+package juuxel.maple.reference;
 
-import juuxel.maple.application.plugin.Plugin;
+import juuxel.maple.plugin.Plugin;
 
 /**
  * Contains the default Maple plugins.

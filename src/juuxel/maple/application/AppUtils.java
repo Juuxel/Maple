@@ -86,6 +86,11 @@ public final class AppUtils
         }
     }
 
+    private static boolean isValidIconField(Field field)
+    {
+        return field.isAnnotationPresent(Metadata.class) && field.getAnnotation(Metadata.class).value() == MetaTypes.ICON && field.getType().isAssignableFrom(Icon.class);
+    }
+
     /**
      * Return true if the app parameter has an icon defined using {@link Metadata}.
      * @param app the application to search the icon for
@@ -99,7 +104,7 @@ public final class AppUtils
         {
             for (Field field : app.getClass().getFields())
             {
-                if (field.isAnnotationPresent(Metadata.class) && field.getAnnotation(Metadata.class).value() == MetaTypes.ICON)
+                if (isValidIconField(field))
                     return true;
             }
         }
@@ -123,7 +128,7 @@ public final class AppUtils
         {
             for (Field field : app.getClass().getFields())
             {
-                if (field.isAnnotationPresent(Metadata.class) && field.getAnnotation(Metadata.class).value() == MetaTypes.ICON)
+                if (isValidIconField(field))
                     return (Icon) field.get(app);
             }
         }
