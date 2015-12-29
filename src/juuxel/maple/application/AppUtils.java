@@ -1,7 +1,6 @@
 package juuxel.maple.application;
 
 import juuxel.maple.application.component.JApplicationFrame;
-import juuxel.maple.application.meta.ApplicationMeta;
 import juuxel.maple.application.meta.MetaTypes;
 import juuxel.maple.application.meta.Metadata;
 
@@ -55,8 +54,6 @@ public final class AppUtils
                 if (field.isAnnotationPresent(Metadata.class))
                     if (field.getAnnotation(Metadata.class).value() == MetaTypes.NAME)
                         return ((String) field.get(appClass));
-                    else if (field.getAnnotation(Metadata.class).value() == MetaTypes.ALL)
-                        return ((ApplicationMeta) field.get(appClass)).getName();
         }
         catch (Exception e)
         {
@@ -64,26 +61,6 @@ public final class AppUtils
         }
 
         return appClass.getSimpleName();
-    }
-
-    /**
-     * Tries to perform the quit action for the app parameter.
-     * @param app the application
-     */
-    public static void performQuitAction(Application app)
-    {
-        try
-        {
-            for (Field field : app.getClass().getFields())
-            {
-                if (field.isAnnotationPresent(Metadata.class) && field.getAnnotation(Metadata.class).value() == MetaTypes.ALL)
-                    ((ApplicationMeta) field.get(app)).quit(app);
-            }
-        }
-        catch (Exception e)
-        {
-            e.printStackTrace();
-        }
     }
 
     private static boolean isValidIconField(Field field)
@@ -156,5 +133,18 @@ public final class AppUtils
             e.printStackTrace();
             return null;
         }
+    }
+
+    /**
+     * Makes a JPanel with FlowLayout to serve as a "box"
+     * for a Component.
+     * @param component the component to box in a JPanel
+     * @return a JPanel with the component added
+     */
+    public static JPanel flowContainer(Component component)
+    {
+        JPanel panel = new JPanel();
+        panel.add(component);
+        return panel;
     }
 }

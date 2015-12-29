@@ -1,8 +1,8 @@
 package juuxel.maple.plugin;
 
-import juuxel.maple.util.ModuleManager;
+import juuxel.maple.util.Manager;
 
-public final class PluginManager extends ModuleManager<Plugin>
+public final class PluginManager extends Manager<Plugin>
 {
     private static final PluginManager MANAGER = new PluginManager();
 
@@ -16,7 +16,7 @@ public final class PluginManager extends ModuleManager<Plugin>
      */
     public static boolean isPluginRegistered(String name)
     {
-        return MANAGER.hasModule(name);
+        return MANAGER.has(name);
     }
 
     /**
@@ -26,7 +26,7 @@ public final class PluginManager extends ModuleManager<Plugin>
      */
     public static boolean isPluginRegistered(Plugin plugin)
     {
-        return MANAGER.hasModule(plugin);
+        return MANAGER.has(plugin);
     }
 
     /**
@@ -35,6 +35,6 @@ public final class PluginManager extends ModuleManager<Plugin>
      */
     public static void registerPlugin(Plugin plugin)
     {
-        MANAGER.addModule(plugin);
+        MANAGER.add(plugin);
     }
 }

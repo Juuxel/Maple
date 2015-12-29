@@ -24,7 +24,7 @@ public abstract class Application extends JPanel
      */
     public Application()
     {
-        this(false);
+        this(!PluginManager.isPluginRegistered(Plugins.INTERNAL_ENVIRONMENT_PLUGIN));
     }
 
     /**
@@ -94,4 +94,10 @@ public abstract class Application extends JPanel
     {
         return PluginManager.isPluginRegistered(Plugins.MENU_BAR_PLUGIN);
     }
+
+    /**
+     * Executed when the application is closed.
+     */
+    public void quit()
+    {}
 }

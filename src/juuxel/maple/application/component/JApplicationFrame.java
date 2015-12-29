@@ -4,11 +4,13 @@ import juuxel.maple.application.AppUtils;
 import juuxel.maple.application.Application;
 
 import javax.swing.*;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
 
 /**
  * Frame for applications.
  */
-public class JApplicationFrame extends JFrame
+public class JApplicationFrame extends JDefaultFrame
 {
     /**
      * The class constructor.
@@ -18,13 +20,9 @@ public class JApplicationFrame extends JFrame
     public JApplicationFrame(Application app, String title)
     {
         super(title);
-        this.getContentPane().add(app);
+        this.setContentPane(app);
         this.setJMenuBar(app.getMenuBar());
-        this.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-        SwingUtilities.invokeLater(() -> {
-            setVisible(true);
-            setSize(750, 600);
-        });
+        this.addWindowListener(new ApplicationWindowListener(app));
     }
 
     /**
@@ -35,5 +33,21 @@ public class JApplicationFrame extends JFrame
     public JApplicationFrame(Application app)
     {
         this(app, AppUtils.getApplicationName(app));
+    }
+
+    private static class ApplicationWindowListener extends WindowAdapter
+    {
+        private final Application application;
+
+        ApplicationWindowListener(Application a)
+        {
+            application = a;
+        }
+
+        @Override
+        public void windowClosing(WindowEvent e)
+        {
+            application.quit();
+        }
     }
 }

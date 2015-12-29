@@ -16,11 +16,6 @@ public enum MetaTypes
     NAME,
 
     /**
-     * Multi-metadata type. Should be an instance of {@link ApplicationMeta}.
-     */
-    ALL,
-
-    /**
      * Description type. Should be an instance of {@link String}.
      */
     DESCRIPTION
