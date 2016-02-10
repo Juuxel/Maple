@@ -18,6 +18,11 @@ public abstract class Application extends JPanel
     private final JMenuBar menuBar = new JMenuBar();
 
     /**
+     * A short description of this application.
+     */
+    private String description;
+
+    /**
      * Default constructor for {@link Application}.
      * @see Application#Application(boolean)
      * @see Application#Application(Class, boolean)
@@ -49,6 +54,7 @@ public abstract class Application extends JPanel
     {
         super();
         initialize(new String[0]);
+        setDescription("A Maple application.");
         buildUserInterface();
 
         if (generateFrame)
@@ -100,4 +106,14 @@ public abstract class Application extends JPanel
      */
     public void quit()
     {}
+
+    public String getDescription()
+    {
+        return description;
+    }
+
+    public void setDescription(String description)
+    {
+        this.description = description;
+    }
 }
